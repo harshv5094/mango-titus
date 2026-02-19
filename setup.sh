@@ -144,7 +144,7 @@ install_dependencies() {
 				libdrm-dev libinput-dev libxcb1-dev libxcb-composite0-dev \
 				libxcb-xfixes0-dev libxcb-res0-dev libxcb-icccm4-dev \
 				libxcb-ewmh-dev libxcb-errors-dev libseat-dev libcairo2-dev \
-				libpango1.0-dev libpam0g-dev xwayland
+				libpango1.0-dev libpam0g-dev xwayland mate-polkit
 			;;
 		dnf)
 			run_pkg_install "$manager" \
@@ -152,14 +152,14 @@ install_dependencies() {
 				wayland-devel wayland-protocols-devel libxkbcommon-devel pixman-devel \
 				libdrm-devel libinput-devel libxcb-devel xcb-util-devel \
 				xcb-util-wm-devel xcb-util-errors-devel seatd-devel cairo-devel \
-				pango-devel pam-devel xorg-x11-server-Xwayland
+				pango-devel pam-devel xorg-x11-server-Xwayland mate-polkit
 			;;
 		pacman)
 			run_pkg_install "$manager" \
 				base-devel git meson ninja pkgconf cmake curl wayland \
 				wayland-protocols wlroots xorg-xwayland libxkbcommon pixman libdrm \
 				libinput libxcb xcb-util xcb-util-wm xcb-util-errors libseat cairo \
-				pango pam
+				pango pam mate-polkit
 			;;
 		zypper)
 			run_pkg_install "$manager" \
@@ -169,7 +169,7 @@ install_dependencies() {
 				wayland-protocols-devel wlroots-devel libxkbcommon-devel \
 				pixman-devel libdrm-devel libinput-devel libxcb-devel \
 				xcb-util-devel xcb-util-wm-devel seatd-devel cairo-devel \
-				pango-devel pam-devel xwayland
+				pango-devel pam-devel xwayland mate-polkit
 			;;
 		*)
 			die "Unsupported package manager: $manager"
